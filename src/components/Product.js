@@ -13,8 +13,8 @@ export default class Product extends Component {
           <ProdConsumer>
             {value => (
               <div
-                className="img-container"
-                style={{ paddingBottom: "1rem" }}
+                className="img-container pb-4"
+                // style={{ paddingBottom: "1rem" }}
                 onClick={() => {
                   value.details(id);
                 }}
@@ -27,6 +27,7 @@ export default class Product extends Component {
                   disabled={inCart ? true : false}
                   onClick={() => {
                     value.addToCart(id);
+                    value.openModal(id);
                   }}
                 >
                   {inCart ? (
@@ -86,7 +87,7 @@ const ProdWrapper = styled.div`
   &:hover {
     .card {
       box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.2);
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
     .card-footer {
       background: rgba(247, 247, 247);

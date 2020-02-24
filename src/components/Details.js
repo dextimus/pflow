@@ -41,16 +41,14 @@ export default class Details extends Component {
                   {/* buttons */}
                   <div>
                     <Link to="/">
-                      <Button style={{ marginRight: "10px" }}>
-                        back to products
-                      </Button>
+                      <Button>back to products</Button>
                     </Link>
                     <Button
                       disabled={inCart ? true : false}
                       cart
-                      // style={{ cursor: "no-drop" }}
                       onClick={() => {
                         value.addToCart(id);
+                        value.openModal(id);
                       }}
                     >
                       {inCart ? "inCart" : "add to cart"}

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -11,41 +10,40 @@ export default function Footer() {
       </ul>
 
       <div style={{ marginRight: "4rem" }}>
-        <Link onClick={() => openTab("facebook")}>
-          <img
-            src="../img/facebook-50.png"
-            alt="facebook"
-            height="30px"
-            style={{ marginRight: "20px" }}
-            title="Facebook"
-          />
-        </Link>
-        <Link onClick={() => openTab("twitter")}>
-          <img
-            src="../img/twitter-50.png"
-            alt="twitter"
-            height="30px"
-            style={{ marginRight: "20px" }}
-            title="Twitter"
-          />
-        </Link>
-        <Link Link onClick={() => openTab("instagram")}>
-          <img
-            src="../img/instagram-50.png"
-            alt="instagram"
-            height="30px"
-            style={{ marginRight: "20px" }}
-            title="Instagram"
-          />
-        </Link>
-        <Link onClick={() => openTab("linkedin")}>
-          <img
-            src="../img/linkedin-50.png"
-            alt="linkedin"
-            height="30px"
-            title="LinkedIn"
-          />
-        </Link>
+        <img
+          src="../img/facebook-50.png"
+          alt="facebook"
+          height="30px"
+          style={{ marginRight: "20px", cursor: "pointer" }}
+          title="Facebook"
+          onClick={() => openTab("facebook")}
+        />
+
+        <img
+          src="../img/twitter-50.png"
+          alt="twitter"
+          height="30px"
+          style={{ marginRight: "20px", cursor: "pointer" }}
+          title="Twitter"
+          onClick={() => openTab("twitter")}
+        />
+        <img
+          src="../img/instagram-50.png"
+          alt="instagram"
+          height="30px"
+          style={{ marginRight: "20px", cursor: "pointer" }}
+          title="Instagram"
+          onClick={() => openTab("instagram")}
+        />
+
+        <img
+          src="../img/linkedin-50.png"
+          alt="linkedin"
+          height="30px"
+          style={{ cursor: "pointer" }}
+          title="LinkedIn"
+          onClick={() => openTab("linkedin")}
+        />
       </div>
     </FooterWrapper>
   );

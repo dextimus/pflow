@@ -5,6 +5,7 @@ const Button = styled.button`
   text-transform: capitalize;
   background: transparent;
   padding: 4px 6px;
+  margin: 0 10px 0 5px;
   border: 2px solid var(--mainBrown);
   border-color: ${props =>
     props.cart ? "var(--darkGreen)" : "var(--mainBrown)"};
