@@ -4,12 +4,12 @@
   --brown3: #ccc7c4ab;
   --mainBrown: #131110b2;
   --lightBrown: #c78762;
+  --mainRed: #640c0cf6;
   --mainWhite: #f3f3f3;
   --darkWhite: #f3f3f3d2;
   --mainGreen: #57bd57;
   --darkGreen: #208320;
   --mainGrey: #7a7979;
-
 }
 
 body {
@@ -33,4 +33,25 @@ body {
 
 .text-dark {
   color: var(--mainBrown);
+}
+
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+}
+
+.btn-black:hover {
+  background: var(--mainGreen);
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainRed) !important;
+}
+
+.img-icon:hover {
+  transform: translateY(-3px);
+  transition: all 0.5s;
 }

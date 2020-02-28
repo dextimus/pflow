@@ -5,12 +5,12 @@ export default function Footer() {
   return (
     <FooterWrapper className="navbar px-sm-6">
       <ul className="list-inline mb-0" style={{ marginLeft: "4rem" }}>
-        <li>Shipping info</li>
-        <li>Payment info</li>
+        <li><u>Payment and Shipping Info</u></li>
       </ul>
 
       <div style={{ marginRight: "4rem" }}>
         <img
+          className="img-icon"
           src="../img/facebook-50.png"
           alt="facebook"
           height="30px"
@@ -20,6 +20,7 @@ export default function Footer() {
         />
 
         <img
+          className="img-icon"
           src="../img/twitter-50.png"
           alt="twitter"
           height="30px"
@@ -28,6 +29,7 @@ export default function Footer() {
           onClick={() => openTab("twitter")}
         />
         <img
+          className="img-icon"
           src="../img/instagram-50.png"
           alt="instagram"
           height="30px"
@@ -37,6 +39,7 @@ export default function Footer() {
         />
 
         <img
+          className="img-icon"
           src="../img/linkedin-50.png"
           alt="linkedin"
           height="30px"
@@ -53,7 +56,7 @@ const FooterWrapper = styled.footer`
   width: 100%;
   left: 0;
   bottom: 0;
-  position: fixed;
+  // position: fixed;
   border-top: 1px solid var(--mainGray);
   background: var(--mainWhite) !important;
   color: var(--mainBrown) !important;
