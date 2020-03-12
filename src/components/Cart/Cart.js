@@ -9,7 +9,7 @@ import CartTotals from './CartTotals';
 export default class Cart extends Component {
   render() {
     return (
-      <section>
+      <section style={{ paddingTop: "5rem" }}>
         <ProdConsumer>
           {value => {
             const { cart } = value;
@@ -19,7 +19,7 @@ export default class Cart extends Component {
                   <Title name="your" title="cart" />
                   <CartColumns />
                   <CartList value={value} />
-                  <CartTotals value={value}/>
+                  <CartTotals value={value} />
                 </React.Fragment>
               );
             } else {

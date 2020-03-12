@@ -7,7 +7,7 @@ import styled from "styled-components";
 class NavBar extends Component {
   render() {
     return (
-      <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
+      <NavWrapper className="navbar fixed-top navbar-expand-sm">
         <a href={"mailto:hello.pflow@gmail.com"}>
           <img src={Logo} alt="Logo" height="40rem" className="navbar-brand" />
         </a>

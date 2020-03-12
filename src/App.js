@@ -7,8 +7,8 @@ import ProductList from "./components/ProductList";
 import Details from "./components/Details";
 import Cart from "./components/Cart/Cart";
 import Default from "./components/Default";
-import Scroll from "./components/Scroll";
-import Footer from "./components/Footer";
+// import Scroll from "./components/Scroll";
+// import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 import About from "./components/About";
 import Contact from './components/Contact';
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <Scroll>
+        {/* <Scroll> */}
           <Switch>
             <Route path="/" component={ProductList} exact />
             <Route path="/details" component={Details} />
@@ -27,9 +27,9 @@ class App extends Component {
             <Route path="/contact" component={Contact} />
             <Route component={Default} />
           </Switch>
-        </Scroll>
+        {/* </Scroll> */}
         <Modal />
-        <Footer />
+        {/* <Footer /> */}
       </React.Fragment>
     );
   }

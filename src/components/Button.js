@@ -15,6 +15,8 @@ const Button = styled.button`
       props.cart ? "var(--darkGreen)" : "var(--lightBrown)"};
     color: var(--mainWhite);
     cursor: ${props => (props.disabled ? "no-drop" : null)};
+    background-color: ${props => (props.pay ? "transparent" : "transparent")};
+    transform: ${props => (props.pay ? "scale(1.1)" : "scale(1.1)")};
   }
   &:focus {
     outline: none;

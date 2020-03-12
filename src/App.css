@@ -51,7 +51,30 @@ body {
   color: var(--mainRed) !important;
 }
 
-.img-icon:hover {
+.img-icon:hover,
+.list:hover {
   transform: translateY(-3px);
   transition: all 0.5s;
+}
+
+.pic-div {
+  overflow: auto;
+  margin: auto;
+  width: 50%;
+}
+
+.pic {
+  float: left;
+  padding: 0 30px 10px 0;
+}
+
+.list {
+  color: var(--mainBrown);
+  text-decoration: none;
+}
+
+form,
+h4 {
+  width: 60%;
+  margin: auto;
 }
