@@ -28,22 +28,24 @@ export default class Details extends Component {
                   <img src={img} className="img-fluid" alt="product" />
                 </div>
                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                  <h4 className="text-dark">
+                  <h5 className="text-capitalize mt-3 mb-0 font-weight-bold">
+                    product description:
+                  </h5>
+                  <p className="text-muted lead">{description}</p>
+                  <h5 className="text-dark">
                     <strong>
                       Price: <span>DKK</span>
                       {price}
                     </strong>
-                  </h4>
-                  <p className="text-capitalize mt-3 mb-0 font-weight-bold">
-                    product description:
-                  </p>
-                  <p className="text-muted lead">{description}</p>
+                  </h5>
+
                   {/* buttons */}
                   <div>
                     <Link to="/">
-                      <Button>back to products</Button>
+                      <Button className="btn-product">back to products</Button>
                     </Link>
                     <Button
+                      className="btn-product"
                       disabled={inCart ? true : false}
                       cart
                       onClick={() => {

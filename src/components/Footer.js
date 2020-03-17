@@ -1,57 +1,49 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Logo from "../email.png";
 
 export default function Footer() {
   return (
     <FooterWrapper className="container">
       <ul className="list-inline mb-3">
         <Link to="/contact">
-          <li className='list'>
+          <li className="list">
             <u>Payment and Shipping Info</u>
           </li>
         </Link>
       </ul>
-      <div className="d-flex justify-content-center mb-5">
+      <div className="d-flex justify-content-center mb-3">
         <div>
           <img
             className="img-icon"
             src="../img/facebook-50.png"
             alt="facebook"
             height="30px"
-            style={{ marginRight: "20px", cursor: "pointer" }}
+            style={{ marginRight: "20px" }}
             title="Facebook"
             onClick={() => openTab("facebook")}
           />
 
           <img
             className="img-icon"
-            src="../img/twitter-50.png"
-            alt="twitter"
-            height="30px"
-            style={{ marginRight: "20px", cursor: "pointer" }}
-            title="Twitter"
-            onClick={() => openTab("twitter")}
-          />
-          <img
-            className="img-icon"
             src="../img/instagram-50.png"
             alt="instagram"
             height="30px"
-            style={{ marginRight: "20px", cursor: "pointer" }}
+            style={{ marginRight: "20px" }}
             title="Instagram"
             onClick={() => openTab("instagram")}
           />
 
-          <img
-            className="img-icon"
-            src="../img/linkedin-50.png"
-            alt="linkedin"
-            height="30px"
-            style={{ cursor: "pointer" }}
-            title="LinkedIn"
-            onClick={() => openTab("linkedin")}
-          />
+          <a href={"mailto:hello.pflow@gmail.com"}>
+            <img
+              className="img-icon"
+              src={Logo}
+              alt="Logo"
+              height="26px"
+              title="mailto:"
+            />
+          </a>
         </div>
       </div>
     </FooterWrapper>
@@ -63,20 +55,15 @@ const FooterWrapper = styled.footer`
   left: 0;
   bottom: 0;
   text-align: center;
-  margin-top: 1rem;
-  border-top: 1px solid var(--mainGray);
+  border-top: none;
   background: var(--mainWhite) !important;
   color: var(--mainBrown) !important;
   font-size: 10px !important;
 `;
 
 const openTab = icon => {
-  if (icon === "linkedin") {
-    window.open("https://www.linkedin.com/");
-  } else if (icon === "facebook") {
+  if (icon === "facebook") {
     window.open("https://www.facebook.com/");
-  } else if (icon === "twitter") {
-    window.open("https://twitter.com/");
   } else if (icon === "instagram") {
     window.open("https://www.instagram.com/");
   }

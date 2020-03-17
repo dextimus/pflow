@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 
 export default function About() {
   return (
@@ -24,6 +25,7 @@ export default function About() {
           blandit velit.
         </p>
       </div>
+      <Footer />
     </React.Fragment>
   );
 }

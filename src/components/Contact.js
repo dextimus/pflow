@@ -1,11 +1,10 @@
 import React from "react";
 import ContactForm from "../Form";
+import Footer from './Footer';
 
 export default function Contact() {
   return (
     <React.Fragment>
-      {/* <div className="container">
-        <div className="row"> */}
       <div className="col-10 mx-auto text-center text-title my-5 pt-5">
         <p>
           Currently we do not provide any shipping methods.
@@ -31,9 +30,8 @@ export default function Contact() {
           questions or:
         </p>
       </div>
-      {/* </div>
-      </div> */}
       <ContactForm />
+    <Footer />
     </React.Fragment>
   );
 }

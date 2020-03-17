@@ -5,13 +5,13 @@ const Button = styled.button`
   text-transform: capitalize;
   background: transparent;
   padding: 4px 6px;
-  margin: 0 10px 0 5px;
+  margin: 0 10px 0 0;
   border: 2px solid var(--mainBrown);
   border-color: ${props =>
     props.cart ? "var(--darkGreen)" : "var(--mainBrown)"};
   transition: all 0.3s ease-in-out;
   &:hover {
-    background: ${props =>
+    background-color: ${props =>
       props.cart ? "var(--darkGreen)" : "var(--lightBrown)"};
     color: var(--mainWhite);
     cursor: ${props => (props.disabled ? "no-drop" : null)};

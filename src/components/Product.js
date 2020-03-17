@@ -9,7 +9,9 @@ export default class Product extends Component {
     const { id, title, img, price, inCart } = this.props.product;
     return (
       <ProdWrapper className="col-9 mx-auto col-md-4 col-lg-4 my-4">
-        {/* <div className="card"> */}
+        <div className="click">
+          <p>Click image for details</p>
+        </div>
         <ProdConsumer>
           {value => (
             <div
@@ -53,7 +55,6 @@ export default class Product extends Component {
             {price}
           </h5>
         </div>
-        {/* </div> */}
       </ProdWrapper>
     );
   }
@@ -76,13 +77,14 @@ const ProdWrapper = styled.div`
   .img-container {
     border: none;
     transition: all 0.3s linear;
+    position: relative;
+    overflow: hidden;
   }
-
   .card-footer {
+    padding: 10px 20px 0 20px;
     background-color: transparent;
     border-color: transparent;
     color: transparent;
-    transform: translateY(-100%);
     transition: all 0.5s linear;
   }
 
@@ -92,13 +94,16 @@ const ProdWrapper = styled.div`
       transform: scale(1.05);
     }
     .card-footer {
-      color: var(--mainWhite);
+      color: var(--mainBrown);
+      background-color: var(--mainWhite);
+      transform: translateY(-85%);
     }
-  }
-
-  .img-container {
-    position: relative;
-    overflow: hidden;
+    .cart-btn {
+      transform: translate(0, -300%);
+    }
+    .click {
+      color: var(--mainRed);
+    }
   }
 
   .cart-btn {
@@ -114,10 +119,6 @@ const ProdWrapper = styled.div`
     transition: all 0.5s linear;
   }
 
-  .img-container:hover .cart-btn {
-    transform: translate(0, -300%);
-  }
-
   .cart-btn:hover {
     background: var(--lightBrown);
     color: var(--mainGreen);
@@ -125,5 +126,11 @@ const ProdWrapper = styled.div`
 
   .cart-btn:focus {
     outline: none;
+  }
+
+  .click {
+    color: transparent;
+    transform: translateY(50%);
+    transition: all 0.5s linear;
   }
 `;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../email.png";
 import Button from "./Button";
 import styled from "styled-components";
 
@@ -8,13 +7,10 @@ class NavBar extends Component {
   render() {
     return (
       <NavWrapper className="navbar fixed-top navbar-expand-sm">
-        <a href={"mailto:hello.pflow@gmail.com"}>
-          <img src={Logo} alt="Logo" height="40rem" className="navbar-brand" />
-        </a>
         <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
-            <Link to="/contact" className="nav-link">
-              Contact
+            <Link to="/" className="nav-link">
+              Products
             </Link>
           </li>
           <li className="nav-item ml-5">
@@ -23,8 +19,8 @@ class NavBar extends Component {
             </Link>
           </li>
           <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
-              Products
+            <Link to="/contact" className="nav-link">
+              Contact
             </Link>
           </li>
         </ul>

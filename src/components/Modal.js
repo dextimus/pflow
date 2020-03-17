@@ -27,12 +27,19 @@ export default class Modal extends Component {
                       <h5>{title}</h5>
                       <h5 className="text-muted text">price: DKK {price}</h5>
                       <Link to="/">
-                        <Button onClick={() => closeModal()} className="text">
+                        <Button
+                          onClick={() => closeModal()}
+                          className="shopping"
+                        >
                           continue shopping
                         </Button>
                       </Link>
                       <Link to="/cart">
-                        <Button onClick={() => closeModal()} cart>
+                        <Button
+                          onClick={() => closeModal()}
+                          cart
+                          className="cart"
+                        >
                           go to the cart
                         </Button>
                       </Link>
@@ -64,8 +71,12 @@ const ModalContainer = styled.div`
   .img {
     margin: 1.5rem 0 2rem 0;
   }
-  .text {
+  .shopping {
     margin-bottom: 2rem;
     // margin-right: 10px;
+  }
+  .shopping:hover,
+  .cart:hover {
+    color: var(--mainBrown);
   }
 `;
