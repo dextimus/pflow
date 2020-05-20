@@ -1,37 +1,26 @@
 import React from "react";
 import ContactForm from "../Form";
-import Footer from './Footer';
+import Footer from "./Footer";
 
 export default function Contact() {
   return (
     <React.Fragment>
-      <div className="col-10 mx-auto text-center text-title my-5 pt-5">
-        <p>
-          Currently we do not provide any shipping methods.
-          <br />
-          You have to come and pick up at:
-          <br />
-          <br />
-          Alliancevej 20 st th
-          <br />
-          2450 Sydhavn
-          <br />
-          Copenhagen
-          <br />
-          <br />
-          At the moment we accept only the following payment methods:
-          <br />
-          - MobilePay;
-          <br />
-          - PayPal;
-          <br />
-          <br />
-          Please call +45 42 43 25 92 before making any payment or having any
-          questions or:
-        </p>
+      <div className="main" id="contact">
+        <div className="col-10 mx-auto text-center my-1 pt-5">
+          <p>
+            We make our pieces based on order, each handmade and unique.
+            <br />
+            We are located in Copenhagen S, where you can also pick up
+            <br />
+            the product. Order by filling the form below or reach us on
+            <br />
+            hello.pflow@gmail.com or social media channels.
+            <br />
+          </p>
+        </div>
+        <ContactForm />
+        <Footer />
       </div>
-      <ContactForm />
-    <Footer />
     </React.Fragment>
   );
 }

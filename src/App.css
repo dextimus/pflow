@@ -1,11 +1,12 @@
 :root {
+  --main: #e0e0e0;
   --brown: #552b07ab;
   --brown2: #634c39ab;
   --brown3: #ccc7c4ab;
   --mainBrown: #131110b2;
   --lightBrown: #c78762;
   --mainRed: #640c0cf6;
-  --mainWhite: #f3f3f3;
+  --mainWhite: #f3f3f3ec;
   --darkWhite: #f3f3f3d2;
   --mainGreen: #57bd57;
   --darkGreen: #208320;
@@ -60,14 +61,35 @@ body {
 }
 
 .pic-div {
+  padding-top: 80px;
   overflow: auto;
   margin: auto;
-  width: 50%;
+  width: 75%;
 }
 
-.pic {
-  float: left;
-  padding: 0 30px 10px 0;
+.img-container_2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 75%;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.selection {
+  display: flex;
+  background-color: #1a0d00;
+  height: 80px;
+  width: 98%;
+  margin: auto;
+}
+
+.selection-p {
+  color: var(--mainWhite);
+  margin: auto;
+  text-align: center;
+  font-size: 1.8rem;
 }
 
 .list {
@@ -77,10 +99,31 @@ body {
 
 form,
 h4 {
-  width: 60%;
+  width: 40%;
   margin: auto;
 }
 
 .btn-product:hover {
   color: var(--mainBrown) !important ;
+}
+
+.main {
+  background-color: var(--main);
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.insp {
+  float: left;
+  padding: 10px 30px 10px 50px;
+}
+
+.insp_descr {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0 4rem 0 4rem;
+  margin-bottom: 4rem;
 }

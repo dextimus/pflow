@@ -1,23 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import Logo from "../email.png";
 
 export default function Footer() {
   return (
     <FooterWrapper className="container">
-      <ul className="list-inline mb-3">
-        <Link to="/contact">
-          <li className="list">
-            <u>Payment and Shipping Info</u>
-          </li>
-        </Link>
-      </ul>
-      <div className="d-flex justify-content-center mb-3">
+      <div className="d-flex justify-content-center my-3">
         <div>
           <img
             className="img-icon"
-            src="../img/facebook-50.png"
+            src="../img/facebook_icon.png"
             alt="facebook"
             height="30px"
             style={{ marginRight: "20px" }}
@@ -27,7 +18,7 @@ export default function Footer() {
 
           <img
             className="img-icon"
-            src="../img/instagram-50.png"
+            src="../img/instagram_icon.svg"
             alt="instagram"
             height="30px"
             style={{ marginRight: "20px" }}
@@ -38,9 +29,9 @@ export default function Footer() {
           <a href={"mailto:hello.pflow@gmail.com"}>
             <img
               className="img-icon"
-              src={Logo}
-              alt="Logo"
-              height="26px"
+              src="../img/gmail.png"
+              alt="email"
+              height="30px"
               title="mailto:"
             />
           </a>
@@ -56,15 +47,17 @@ const FooterWrapper = styled.footer`
   bottom: 0;
   text-align: center;
   border-top: none;
-  background: var(--mainWhite) !important;
+  // background: var(--main) !important;
   color: var(--mainBrown) !important;
   font-size: 10px !important;
 `;
 
-const openTab = icon => {
+const openTab = (icon) => {
   if (icon === "facebook") {
-    window.open("https://www.facebook.com/");
+    window.open(
+      "https://www.facebook.com/pg/P-flow-111272256919544/about/?ref=page_internal"
+    );
   } else if (icon === "instagram") {
-    window.open("https://www.instagram.com/");
+    window.open("https://www.instagram.com/hello.pflow/");
   }
 };
